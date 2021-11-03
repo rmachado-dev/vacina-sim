@@ -1,0 +1,47 @@
+/* geral */
+html{
+   scroll-behavior: smooth;
+}
+a, a:hover, a:active, a:focus{
+   color: unset;
+   text-decoration: none;
+}
+
+/* fundos */
+.bg-azul{
+   background-color: #427AA9;
+}
+.bg-verde-escuro{
+   background-color: #048737;
+}
+.bg-verde-claro{
+   background-color: #AFCB07;
+}
+
+/* textos */
+.txt-azul{
+   background-color: #427AA9;
+}
+.txt-verde-escuro{
+   background-color: #048737;
+}
+.txt-verde-claro{
+   background-color: #AFCB07;
+}
+
+/* fontes */
+@font-face {
+   font-family: 'apex_newbook';
+   src: url('../fonts/apexnew-book-opentype-webfont.woff2') format('woff2'),
+        url('../fonts/apexnew-book-opentype-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+/* menu */
+#menu{
+   font-family: apex_newbook;
+}
+
+/* slides */
+

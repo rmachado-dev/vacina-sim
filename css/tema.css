@@ -1,13 +1,17 @@
-/* geral */
+/* geral -----------------*/
 html{
    scroll-behavior: smooth;
+}
+body{
+   font-family: apex_newbook;
+   font-size: 13pt;
 }
 a, a:hover, a:active, a:focus{
    color: unset;
    text-decoration: none;
 }
 
-/* fundos */
+/* fundos -----------------*/
 .bg-azul{
    background-color: #427AA9;
 }
@@ -18,18 +22,18 @@ a, a:hover, a:active, a:focus{
    background-color: #AFCB07;
 }
 
-/* textos */
+/* textos -----------------*/
 .txt-azul{
-   background-color: #427AA9;
+   color: #427AA9;
 }
 .txt-verde-escuro{
-   background-color: #048737;
+   color: #048737;
 }
 .txt-verde-claro{
-   background-color: #AFCB07;
+   color: #AFCB07;
 }
 
-/* fontes */
+/* fontes -----------------*/
 @font-face {
    font-family: 'apex_newbook';
    src: url('../fonts/apexnew-book-opentype-webfont.woff2') format('woff2'),
@@ -38,10 +42,56 @@ a, a:hover, a:active, a:focus{
    font-style: normal;
 }
 
-/* menu */
+@font-face {
+   font-family: 'apex_newbold';
+   src: url('apexnew-bold-opentype_1-webfont.woff2') format('woff2'),
+        url('apexnew-bold-opentype_1-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+
+}
+
+/* menu -----------------*/
 #menu{
    font-family: apex_newbook;
 }
 
-/* slides */
 
+/* slides -----------------*/
+#slides .row>* {
+   padding-right: 0px !important;
+   padding-left: 0px !important;
+}
+
+
+/* pqvacinar -----------------*/
+#pqvacinar h1{
+   font-family: apex_newbook;
+   color: #fff;
+   text-align: right;
+   font-size: 58pt;
+}
+#pqvacinar p{
+   line-height: 1.5;
+}
+
+
+/* qdovacinar -----------------*/
+#qdovacinar h1{
+   font-family: apex_newbook;
+   font-size: 53pt;
+}
+#qdovacinar span{
+   font-size: 30pt;   
+   margin-right: 15px;
+}
+.line{
+   line-height: 1;
+}
+
+/* ondevacinar ---------------*/
+
+#ondevacinar h1{
+   font-size: 60pt;
+   color: #fff;
+}

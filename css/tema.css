@@ -24,10 +24,10 @@ a, a:hover, a:active, a:focus{
 
 /* textos -----------------*/
 .txt-azul{
-   color: #427AA9;
+   color: #427AA9 !important;
 }
 .txt-verde-escuro{
-   color: #048737;
+   color: #048737 !important;
 }
 .txt-verde-claro{
    color: #AFCB07;
@@ -75,6 +75,16 @@ a, a:hover, a:active, a:focus{
    line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+   #pqvacinar h1{ 
+      text-align: center;
+      font-size: 40pt;
+   }   
+   #pqvacinar p{
+      text-align: center;
+   }
+}
+
 
 /* qdovacinar -----------------*/
 #qdovacinar h1{
@@ -89,9 +99,52 @@ a, a:hover, a:active, a:focus{
    line-height: 1;
 }
 
+
+@media (max-width: 768px) {
+   #qdovacinar h1{ 
+      text-align: center !important;
+      font-size: 40pt;
+   }   
+   #qdovacinar p{
+      text-align: center;
+      line-height: 1.4;
+   }
+   
+   #qdovacinar-2 p{
+      line-height: 1.4;
+   }
+   #qdovacinar h2, span{ 
+      text-align: center !important;
+      font-size: 25px !important;
+   }   
+}
+
 /* ondevacinar ---------------*/
 
 #ondevacinar h1{
    font-size: 60pt;
    color: #fff;
+}
+
+@media (max-width: 768px) {
+   #ondevacinar h1{ 
+      text-align: center !important;
+      font-size: 38pt !important;
+   }   
+   #ondevacinar-mobile h1{ 
+      text-align: center !important;
+      font-size: 38pt !important;
+   }   
+   #ondevacinar p{
+      line-height: 1.4;      
+   }
+   #ondevacinar ul{
+      font-size: 12pt;
+   }
+   #ondevacinar h2, span{ 
+      text-align: center !important;
+   }   
+   #accordionFlushExample small{ 
+      font-size: 12px !important;
+   }   
 }

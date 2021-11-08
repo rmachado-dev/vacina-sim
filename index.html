@@ -19,11 +19,12 @@
    <section class="py-5">
       <div class="container">
          <div class="row align-items-center">
-            <div class="col-sm-6">
-               <img src="img/100anos.png" class="img-fluid mx-sm-5 " alt="">
+            <div class="col-12 col-sm-6  order-sm-1 order-2">
+               <img src="img/100anos.png" class="img-fluid mx-sm-5 mx-auto d-block d-none d-sm-block " alt="">
+               <img src="img/100anos.png" class="img-fluid mx-auto d-block d-sm-none w-25 mt-4 " alt="">
             </div>
-            <div class="col-sm-6">
-               <img src="img/logo-saude.png" class="img-fluid" alt="">
+            <div class="col-12 col-sm-6 mb-4 order-sm-2 order-1">
+               <img src="img/logo-saude.png" class="img-fluid mx-auto d-block  " alt="">
             </div>
          </div>
       </div>
@@ -36,14 +37,38 @@
          <div class="row text-center text-white">
             <div class="col-sm-4 bg-azul py-2"><a href="#pqvacinar">PORQUE VACINAR</a></div>
             <div class="col-sm-4 bg-verde-escuro py-2"> <a href="#qdovacinar">QUANDO VACINAR</a></div>
-            <div class="col-sm-4 bg-verde-claro py-2"> <a href="#ondevacinar"> ONDE VACINAR </a></div>
+            <div class="col-sm-4 bg-verde-claro py-2 d-none d-sm-block"> <a href="#ondevacinar"> ONDE VACINAR </a></div>
+            <div class="col-sm-4 bg-verde-claro py-2 d-block d-sm-none"> <a href="#ondevacinar-mobile"> ONDE VACINAR</a>
+            </div>
          </div>
       </div>
    </section>
 
    <!-- slides -->
    <section id="slides">
-      <div class="container-fluid">
+      <!-- mobile -->
+      <div class="container-fluid d-block d-sm-none">
+         <div class="row p-blank">
+            <div class="col-sm-12">
+               <div class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <img src="img/banner-1a.jpg" class="img-fluid w-100" alt="...">
+                     </div>
+                     <div class="carousel-item">
+                        <img src="img/banner-2a.jpg" class="img-fluid w-100" alt="...">
+                     </div>
+                     <div class="carousel-item">
+                        <img src="img/banner-3a.jpg" class="img-fluid w-100" alt="...">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <img src="img/barra-slide.jpg" class="m-0 img-fluid" alt="">
+         </div>
+      </div>
+      <!-- desktop -->
+      <div class="container-fluid d-none d-sm-block">
          <div class="row p-blank">
             <div class="col-sm-12">
                <div class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -71,18 +96,18 @@
          <div class="row">
             <div class="col-sm-4">
                <h1>POR QUE <br> VACINAR</h1>
-               <img src="img/ico-seringa.png" class="img-fluid float-end" alt="">
+               <img src="img/ico-seringa.png" class="img-fluid float-sm-end mx-auto d-block mb-4" alt="">
             </div>
-            <div class="col-sm-7 ms-3">
+            <div class="col-sm-7 ms-sm-3">
                <p>A Prefeitura de Aparecida convidou o Dr. Xxxxxx para falar um pouco sobre a segurança das vacinas e a
                   importância de manter o cartão de vacinação sempre atualizado. Dá o play aí e depois dá uma passada no
                   Posto de Saúde perto da sua casa.</p>
-               <div class="ratio ratio-16x9 mt-sm-5">
-                  <iframe src="https://www.youtube.com/embed/VMKU6HhWgHE?controls=0" title="YouTube video player"
-                     frameborder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                     allowfullscreen></iframe>
-               </div>
+               <iframe class="mx-auto d-block" width="90%" height="400"
+                  src="https://www.youtube.com/embed/VMKU6HhWgHE?controls=0" title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+               </iframe>
             </div>
          </div>
       </div>
@@ -90,14 +115,15 @@
 
    <!-- qdo vacinar -->
    <section id="qdovacinar" class="py-5">
-      <div class="container px-5">
+      <div class="container px-sm-5">
          <div class="row py-3">
-            <div class="col-sm-3">
+            <div class="col-12 col-sm-4">
                <h1 class="txt-verde-escuro text-end">QUANDO <br> VACINAR</h1>
             </div>
-            <div class="col-sm-8 ms-4">
+            <div class="col-12 col-sm-7 ms-sm-4">
                <p>
-                  <img src="img/ico-qdo-vacinar.png" alt="">
+                  <img src="img/ico-qdo-vacinar.png" alt="" class="d-none d-sm-block">
+                  <img src="img/ico-qdo-vacinar.png" alt="" class="mx-auto d-block d-sm-none">
                </p>
                <p>
                   Para deixar tudo bem organizado e fácil de entender, a Prefeitura de Aparecida preparou
@@ -107,181 +133,416 @@
             </div>
          </div>
 
-         <div class="row mt-3">
-            <div class="col-sm-10">
-               <p class="txt-verde-escuro mb-5">
-                  <span>CRIANÇAS</span> (ATÉ 4 ANOS – IMUNIZAÇÃO OBRIGATÓRIA)
-               </p>
+
+         <!-- accordion mobile -->
+         <div class="accordion accordion-flush d-block d-sm-none" id="accordionFlushExample">
+
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush">
+                  <button class="accordion-button collapsed txt-verde-escuro text-left" type="button"
+                     data-bs-toggle="collapse" data-bs-target="#flush-criancas" aria-expanded="false"
+                     aria-controls="flush-criancas">
+
+                     <div class="d-flex flex-column align-items-start">
+                        <span class="mb-1">CRIANÇAS</span>
+                        <small> (ATÉ 4 ANOS – IMUNIZAÇÃO OBRIGATÓRIA)</small>
+                     </div>   
+
+                  </button>
+               </h2>
+               <div id="flush-criancas" class="accordion-collapse collapse" aria-labelledby="flush"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+
+                     <!-- lista -->
+                     <div class="row my-2">
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-nascer.png" class="mb-3 mx-sm-0 mx-auto d-block w-25" alt="">
+                           <h2 class="txt-verde-escuro mb-3">AO NASCER</h2>
+                           <ul class="mx-sm-0 mx-5">
+                              <li>BCG (dose única)</li>
+                              <li>Hepatite B (uma dose)</li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">2 MESES</h2>
+                           <ul class="mx-sm-0 mx-3">
+                              <li>Pentavalente (1a dose)</li>
+                              <li>VIP (1a dose)</li>
+                              <li>Pneumocócica 10V </li>
+                              <li>(conjugada / 1a dose)</li>
+                              <li>Rotavírus (1a dose)</li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">3 MESES</h2>
+                           <ul class="mx-sm-0 mx-4">
+                              <li>Meningocócica C <br>
+                                 (conjugada / 1a dose)
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">4 MESES</h2>
+                           <ul class="mx-sm-0 mx-3">
+                              <li>Pentavalente (2a dose)</li>
+                              <li>VIP (2a dose)</li>
+                              <li>Pneumocócica 10V <br>
+                                 (conjugada / 1a dose)
+                              </li>
+                              <li>Rotavírus (2a dose)</li>
+                           </ul>
+                        </div>
+                     </div>
+
+                     <!-- lista -->
+                     <div class="row my-2">
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">5 MESES</h2>
+                           <ul class="mx-sm-0 mx-3">
+                              <li>Meningocócica C <br> (conjugada / 2a dose) </li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">6 MESES</h2>
+                           <ul class="mx-sm-0 mx-4">
+                              <li>Pentavalente (2a dose)</li>
+                              <li>VIP (2a dose)</li>
+                              <li>Influenza (1a dose)</li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">7 MESES</h2>
+                           <ul class="mx-sm-0 mx-4">
+                              <li>Influenza <br> (2a dose/ depois, uma por ano até os 5 anos)</li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">9 MESES</h2>
+                           <ul class="mx-sm-0 mx-1">
+                              <li>Febre amarela (dose única) </li>
+                           </ul>
+                        </div>
+                     </div>
+
+                     <!-- lista -->
+                     <div class="row mb-5">
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">12 MESES</h2>
+                           <ul class="mx-sm-0 mx-3">
+                              <li>Pneumocócica 10V <br> (conjugada / reforço) </li>
+                              <li>Meningocócica C <br> (conjugada / reforço)</li>
+                              <li>Tríplice viral (1a dose)</li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">15 MESES</h2>
+                           <ul class="mx-sm-0 mx-4">
+                              <li>DTP (1o reforço)</li>
+                              <li>bVOP (1a dose / 1o reforço da VIP)</li>
+                              <li>Hepatite A (uma dose)</li>
+                              <li>Tetra viral (uma dose)</li>
+                           </ul>
+                        </div>
+                        <div class="col-12 mb-5 col-sm-3">
+                           <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                           <h2 class="txt-verde-escuro mb-3">4 ANOS</h2>
+                           <ul class="mx-sm-0 mx-4">
+                              <li>DTP (2o reforço)</li>
+                              <li>bVOP (2a dose / 2o reforço da VIP)</li>
+                              <li>Varicela (uma dose)</li>
+                           </ul>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush">
+                  <button class="accordion-button collapsed txt-verde-escuro " type="button" data-bs-toggle="collapse"
+                     data-bs-target="#flush-adolescentes" aria-expanded="false" aria-controls="flush-adolescentes">
+                     <span>ADOLESCENTES</span>
+                  </button>
+               </h2>
+               <div id="flush-adolescentes" class="accordion-collapse collapse" aria-labelledby="flush"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                     <img src="img/ico-adolescentes.png" class="mb-3 mx-auto d-block w-25" alt="">
+                     <h2 class="txt-verde-escuro mb-3">9 A 19 ANOS </h2>
+                     <ul>
+                        <li>Hepatite B (3 doses*)</li>
+                        <li>Meningocócica C <br>(conjugada / 1o reforço ou dose única – 11 a 14 anos)</li>
+                        <li>Febre amarela (dose única*)</li>
+                        <li>Tríplice viral (2 doses*)</li>
+                        <li>HPV (2 doses – meninas 9 a 14 anos / meninos 11 a 14 anos)</li>
+                        <li>Dupla adulto (reforço a cada 10 anos)</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush">
+                  <button class="accordion-button collapsed txt-verde-escuro " type="button" data-bs-toggle="collapse"
+                     data-bs-target="#flush-adultos" aria-expanded="false" aria-controls="flush-adultos">
+                     <span>ADULTOS</span>
+                  </button>
+               </h2>
+               <div id="flush-adultos" class="accordion-collapse collapse" aria-labelledby="flush"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                     <img src="img/ico-adultos.png" class="mb-3 mx-auto d-block w-25" alt="">
+                     <h2 class="txt-verde-escuro mb-3">20 ANOS OU MAIS</h2>
+                     <ul>
+                        <li>Hepatite B (3 doses*)</li>
+                        <li>Febre amarela (dose única*) </li>
+                        <li>Tríplice viral <br>(2 doses – 0 até 29 anos / uma dose – 30 a 49 anos)</li>
+                        <li>Dupla adulto (reforço a cada 10 anos) </li>
+                        <li>Influenza <br>(uma dose por ano a partir dos 60 anos)</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush">
+                  <button class="accordion-button collapsed txt-verde-escuro " type="button" data-bs-toggle="collapse"
+                     data-bs-target="#flush-gestantes" aria-expanded="false" aria-controls="flush-gestantes">
+                     <span>GESTANTES</span>
+                  </button>
+               </h2>
+               <div id="flush-gestantes" class="accordion-collapse collapse" aria-labelledby="flush"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                     <img src="img/ico-gestantes.png" class="mb-3 mx-auto d-block w-25" alt="">
+                     <ul>
+                        <li>Hepatite B (3 doses*)</li>
+                        <li>Dupla adulto (3 doses*)</li>
+                        <li>dTpa (uma dose a cada gestação, a partir da 20a semana)</li>
+                        <li>Influenza (uma dose)</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+
+
+
+         </div>
+
+         <!-- desktop -->
+         <div class="d-none d-sm-block">
+
+            <div class="row mt-3">
+               <div class="col-sm-12">
+                  <p class="txt-verde-escuro mb-5">
+                     <span>CRIANÇAS</span> (ATÉ 4 ANOS – IMUNIZAÇÃO OBRIGATÓRIA)
+                  </p>
+               </div>
+            </div>
+
+            <!-- lista -->
+            <div class="row mb-5">
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-nascer.png" class="mb-3 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">AO NASCER</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>BCG (dose única)</li>
+                     <li>Hepatite B (uma dose)</li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">2 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Pentavalente (1a dose)</li>
+                     <li>VIP (1a dose)</li>
+                     <li>Pneumocócica 10V </li>
+                     <li>(conjugada / 1a dose)</li>
+                     <li>Rotavírus (1a dose)</li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">3 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Meningocócica C <br>
+                        (conjugada / 1a dose)
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">4 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Pentavalente (2a dose)</li>
+                     <li>VIP (2a dose)</li>
+                     <li>Pneumocócica 10V <br>
+                        (conjugada / 1a dose)
+                     </li>
+                     <li>Rotavírus (2a dose)</li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- lista -->
+            <div class="row mb-5">
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">5 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Meningocócica C <br> (conjugada / 2a dose) </li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">6 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Pentavalente (2a dose)</li>
+                     <li>VIP (2a dose)</li>
+                     <li>Influenza (1a dose)</li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">7 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Influenza <br> (2a dose/ depois, uma por ano até os 5 anos)</li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">9 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Febre amarela <br> (dose única) </li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- lista -->
+            <div class="row mb-5">
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">12 MESES</h2>
+                  <ul class="mx-sm-0 mx-5">
+                     <li>Pneumocócica 10V <br> (conjugada / reforço) </li>
+                     <li>Meningocócica C <br> (conjugada / reforço)</li>
+                     <li>Tríplice viral (1a dose)</li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">15 MESES</h2>
+                  <ul class="mx-sm-0 mx-4">
+                     <li>DTP (1o reforço)</li>
+                     <li>bVOP (1a dose / 1o reforço da VIP)</li>
+                     <li>Hepatite A (uma dose)</li>
+                     <li>Tetra viral (uma dose)</li>
+                  </ul>
+               </div>
+               <div class="col-12 mb-5 col-sm-3">
+                  <img src="img/ico-bebe.png" class="mb-5 mx-sm-0 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">4 ANOS</h2>
+                  <ul class="mx-sm-0 ">
+                     <li>DTP (2o reforço)</li>
+                     <li>bVOP (2a dose / 2o reforço da VIP)</li>
+                     <li>Varicela (uma dose)</li>
+                  </ul>
+               </div>
+
+            </div>
+
+            <!-- lista -->
+            <div class="row mb-5">
+               <div class="col-12 col-sm-4 mb-5">
+                  <p class="txt-verde-escuro ms-sm-4 mb-3 text-center">
+                     <span>ADOLESCENTES</span>
+                  </p>
+                  <img src="img/ico-adolescentes.png" class="mb-5 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">9 A 19 ANOS </h2>
+                  <ul>
+                     <li>Hepatite B (3 doses*)</li>
+                     <li>Meningocócica C <br>(conjugada / 1o reforço ou dose única – 11 a 14 anos)</li>
+                     <li>Febre amarela (dose única*)</li>
+                     <li>Tríplice viral (2 doses*)</li>
+                     <li>HPV (2 doses – meninas 9 a 14 anos / meninos 11 a 14 anos)</li>
+                     <li>Dupla adulto (reforço a cada 10 anos)</li>
+                  </ul>
+               </div>
+               <div class="col-12 col-sm-4 mb-5">
+                  <p class="txt-verde-escuro ms-sm-4 mb-3">
+                     <span>ADULTOS</span>
+                  </p>
+                  <img src="img/ico-adultos.png" class="mb-5 mx-auto d-block" alt="">
+                  <h2 class="txt-verde-escuro mb-3">20 ANOS OU MAIS</h2>
+                  <ul>
+                     <li>Hepatite B (3 doses*)</li>
+                     <li>Febre amarela (dose única*) </li>
+                     <li>Tríplice viral <br>(2 doses – 0 até 29 anos / uma dose – 30 a 49 anos)</li>
+                     <li>Dupla adulto (reforço a cada 10 anos) </li>
+                     <li>Influenza <br>(uma dose por ano a partir dos 60 anos)</li>
+                  </ul>
+               </div>
+               <div class="col-12 col-sm-4">
+                  <p class="txt-verde-escuro ms-sm-4 mb-3">
+                     <span>GESTANTES</span>
+                  </p>
+                  <img src="img/ico-gestantes.png" class="mb-5 mx-auto d-block" alt="">
+                  <ul>
+                     <li>Hepatite B (3 doses*)</li>
+                     <li>Dupla adulto (3 doses*)</li>
+                     <li>dTpa (uma dose a cada gestação, a partir da 20a semana)</li>
+                     <li>Influenza (uma dose)</li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="row bg-verde-escuro p-5 d-none d-sm-block">
+               <div class="col-sm-12 text-white line">
+                  <p> <b>BCG</b> – contra turbeculose</p>
+                  <p> <b> Pentavalente </b> – contra difteria, tétano, pertússis (coqueluche), Haemophilus Influenzae B
+                     e
+                     hepatite B</p>
+                  <p><b>DTP </b>– contra difteria, tétano e pertussis (coqueluche)</p>
+                  <p><b>VIP</b> – injetável contra pólio</p>
+                  <p><b>bVOP</b> – oral contra dois sorotipos do vírus da poliomielite</p>
+                  <p><b>Pneumocócica 10V </b> – contra 10 sorotipos da bactéria Streptococcus pneumoniae, da pneumonia e
+                     da
+                     meningite</p>
+                  <p><b>Rotavírus</b> – contra diarreia de origem viral</p>
+                  <p><b>Meningocócica C </b>– contra o sorotipo C da bactéria Neisseria meningitidis, causadora de
+                     meningite</p>
+                  <p><b>Tríplice viral</b> – contra sarampo, rubéola e caxumba</p>
+                  <p><b>Tetra viral</b> – contra sarampo, rubéola, caxumba e varicela (catapora)</p>
+                  <p><b>HPV</b> – contra 4 sorotipos do vírus do papiloma humano, que causa verrugas genitais e câncer
+                  </p>
+                  <p><b>Dupla adulto</b> – contra difteria e tétano</p>
+                  <p><b>dTpa</b> – contra difteria, tétano e pertussis (coqueluche), produzidas com fragmentos das
+                     bactérias que causam estas doenças</p>
+               </div>
             </div>
          </div>
-         <!-- lista -->
-         <div class="row mb-5">
-            <div class="col-sm-3">
-               <img src="img/ico-nascer.png" class="mb-3" alt="">
-               <h2 class="txt-verde-escuro mb-3">AO NASCER</h2>
-               <ul>
-                  <li>BCG (dose única)</li>
-                  <li>Hepatite B (uma dose)</li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">2 MESES</h2>
-               <ul>
-                  <li>Pentavalente (1a dose)</li>
-                  <li>VIP (1a dose)</li>
-                  <li>Pneumocócica 10V </li>
-                  <li>(conjugada / 1a dose)</li>
-                  <li>Rotavírus (1a dose)</li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">3 MESES</h2>
-               <ul>
-                  <li>Meningocócica C <br>
-                     (conjugada / 1a dose)
-                  </li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">4 MESES</h2>
-               <ul>
-                  <li>Pentavalente (2a dose)</li>
-                  <li>VIP (2a dose)</li>
-                  <li>Pneumocócica 10V <br>
-                     (conjugada / 1a dose)
-                  </li>
-                  <li>Rotavírus (2a dose)</li>
-               </ul>
-            </div>
-         </div>
+      </div>
 
-         <!-- lista -->
-         <div class="row mb-5">
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">5 MESES</h2>
-               <ul>
-                  <li>Meningocócica C <br> (conjugada / 2a dose) </li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">6 MESES</h2>
-               <ul>
-                  <li>Pentavalente (2a dose)</li>
-                  <li>VIP (2a dose)</li>
-                  <li>Influenza (1a dose)</li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">7 MESES</h2>
-               <ul>
-                  <li>Influenza <br> (2a dose/ depois, uma por ano até os 5 anos)</li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">9 MESES</h2>
-               <ul>
-                  <li>Febre amarela <br> (dose única) </li>
-               </ul>
-            </div>
-         </div>
+   </section>
 
-         <!-- lista -->
-         <div class="row mb-5">
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">12 MESES</h2>
-               <ul>
-                  <li>Pneumocócica 10V <br> (conjugada / reforço) </li>
-                  <li>Meningocócica C <br> (conjugada / reforço)</li>
-                  <li>Tríplice viral (1a dose)</li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">15 MESES</h2>
-               <ul>
-                  <li>DTP (1o reforço)</li>
-                  <li>bVOP (1a dose / 1o reforço da VIP)</li>
-                  <li>Hepatite A (uma dose)</li>
-                  <li>Tetra viral (uma dose)</li>
-               </ul>
-            </div>
-            <div class="col-sm-3">
-               <img src="img/ico-bebe.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">4 ANOS</h2>
-               <ul>
-                  <li>DTP (2o reforço)</li>
-                  <li>bVOP (2a dose / 2o reforço da VIP)</li>
-                  <li>Varicela (uma dose)</li>
-               </ul>
-            </div>
-
-         </div>
-
-
-         <div class="row mt-3">
-            <div class="col-sm-4">
-               <p class="txt-verde-escuro ms-4 mb-5">
-                  <span>ADOLESCENTES</span>
-               </p>
-            </div>
-            <div class="col-sm-4">
-               <p class="txt-verde-escuro ms-4 mb-5">
-                  <span>ADULTOS</span>
-               </p>
-            </div>
-            <div class="col-sm-4">
-               <p class="txt-verde-escuro ms-4 mb-5">
-                  <span>GESTANTES</span>
-               </p>
-            </div>
-         </div>
-
-         <!-- lista -->
-         <div class="row mb-5">
-            <div class="col-sm-4">
-               <img src="img/ico-adolescentes.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">9 A 19 ANOS </h2>
-               <ul>
-                  <li>Hepatite B (3 doses*)</li>
-                  <li>Meningocócica C <br>(conjugada / 1o reforço ou dose única – 11 a 14 anos)</li>
-                  <li>Febre amarela (dose única*)</li>
-                  <li>Tríplice viral (2 doses*)</li>
-                  <li>HPV (2 doses – meninas 9 a 14 anos / meninos 11 a 14 anos)</li>
-                  <li>Dupla adulto (reforço a cada 10 anos)</li>
-               </ul>
-            </div>
-            <div class="col-sm-4">
-               <img src="img/ico-adultos.png" class="mb-5" alt="">
-               <h2 class="txt-verde-escuro mb-3">20 ANOS OU MAIS</h2>
-               <ul>
-                  <li>Hepatite B (3 doses*)</li>
-                  <li>Febre amarela (dose única*) </li>
-                  <li>Tríplice viral <br>(2 doses – 0 até 29 anos / uma dose – 30 a 49 anos)</li>
-                  <li>Dupla adulto (reforço a cada 10 anos) </li>
-                  <li>Influenza <br>(uma dose por ano a partir dos 60 anos)</li>
-               </ul>
-            </div>
-            <div class="col-sm-4">
-               <img src="img/ico-gestantes.png" class="mb-5" alt="">
-               <ul>
-                  <li>Hepatite B (3 doses*)</li>
-                  <li>Dupla adulto (3 doses*)</li>
-                  <li>dTpa (uma dose a cada gestação, a partir da 20a semana)</li>
-                  <li>Influenza (uma dose)</li>
-               </ul>
-            </div>
-         </div>
-
-         <div class="row bg-verde-escuro p-5">
-            <div class="col-sm-12 text-white line">
+   <!-- mobile -->
+   <section id="qdovacinar-2" class="d-block d-sm-none">
+      <div class="container">
+         <div class="row bg-verde-escuro p-3 ">
+            <div class="col-sm-12 text-white line py-3">
                <p> <b>BCG</b> – contra turbeculose</p>
                <p> <b> Pentavalente </b> – contra difteria, tétano, pertússis (coqueluche), Haemophilus Influenzae B e
                   hepatite B</p>
@@ -302,13 +563,13 @@
             </div>
          </div>
       </div>
-
    </section>
 
-   <section id="ondevacinar" class="bg-azul py-5 text-white">
+   <!-- desktop -->
+   <section id="ondevacinar" class="bg-azul py-5 text-white d-none d-sm-block">
       <div class="container">
-
-         <div class="row d-flex align-items-end mb-5">
+         <!-- desktop -->
+         <div class="row py-5">
             <div class="col-sm-6">
                <h1>ONDE VACINAR</h1>
             </div>
@@ -317,6 +578,7 @@
                <p>UBSs COM SALA DE VACINA EM APARECIDA DE GOIÂNIA</p>
             </div>
          </div>
+
          <div class="row">
             <div class="col-sm-4">
                <ul>
@@ -492,19 +754,497 @@
       </div>
    </section>
 
+   <!-- mobile -->
+   <section id="ondevacinar-mobile" class="bg-azul py-3 text-white d-block d-sm-none">
+      <div class="container">
+
+         <div class="row d-flex align-items-end py-5">
+            <div class="col-12">
+               <h1>ONDE VACINAR</h1>
+            </div>
+            <div class="col-12 text-center">
+               <img src="img/ico-onde-vacinar.png" alt="" class="mb-4 mx-auto d-block">
+               <p>UBSs COM SALA DE VACINA EM APARECIDA DE GOIÂNIA</p>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-12">
+
+               <div class="accordion" id="accordionExample">
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#um" aria-expanded="true" aria-controls="um">
+                           <b>Jardim dos Ipês </b>
+                        </button>
+                     </h2>
+                     <div id="um" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua JI 51, Qd. 202, Lts. 35/36, Residencial Jardim dos Ipês <br> Telefone: (62)
+                              3578-9027 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#dois" aria-expanded="true" aria-controls="dois">
+                           <b>UBS Alto Paraíso </b>
+                        </button>
+                     </h2>
+                     <div id="dois" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua Cabo Frio com Rua São Félix
+                              e Rua Santa Ana, APM-5, Jardim Alto Paraíso <br>
+                              Telefone: (62) 3296-7715 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#tres" aria-expanded="true" aria-controls="tres">
+                           <b>UBS Bairro Ilda </b>
+                        </button>
+                     </h2>
+                     <div id="tres" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua José Bernardes de Sousa,
+                              Qd. 33, Lt. 07, Bairro Ilda <br>
+                              Telefone: (62) 3594-8722 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#quatro" aria-expanded="true" aria-controls="quatro">
+                           <b>UBS Bairro Independência </b>
+                        </button>
+                     </h2>
+                     <div id="quatro" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua 60, Qd. K 40, Lt. 01,
+                              Bairro Independência <br>
+                              Telefone: (62) 3545-9446 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#cinco" aria-expanded="true" aria-controls="cinco">
+                           <b>UBS Bandeirantes </b>
+                        </button>
+                     </h2>
+                     <div id="cinco" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua Amador Bueno com Rua Pascoal Moreira Cabral, St. Bandeirantes <br>
+                              Telefone: (62) 3578-5429 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#seis" aria-expanded="true" aria-controls="seis">
+                           <b>UBS Buriti Sereno </b>
+                        </button>
+                     </h2>
+                     <div id="seis" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Praça Marechal Hermes com Rua Pedro Américo, Qd. 306, Jardim Buriti Sereno <br>
+                              Telefone: (62) 3258-4154 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#sete" aria-expanded="true" aria-controls="sete">
+                           <b>UBS Campos Elísios </b>
+                        </button>
+                     </h2>
+                     <div id="sete" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua La Rochelle, Qd. 50, APM-6, Campos Elísios <br>
+                              Telefone: (62) 3545-6047 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#oito" aria-expanded="true" aria-controls="oito">
+                           <b>UBS Cândido de Queiroz </b>
+                        </button>
+                     </h2>
+                     <div id="oito" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua 20, Qd. 28, APM-7,
+                              Residencial Cândido de Queiroz <br>
+                              Telefone: (62) 3549-7585 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#nove" aria-expanded="true" aria-controls="nove">
+                           <b>UBS Caraíbas </b>
+                        </button>
+                     </h2>
+                     <div id="nove" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Avenida Domitília Lobo, Qd. 26,
+                              Lt. 13, Residencial Caraíbas <br>
+                              Telefone: (62) 3288-0357 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#dez" aria-expanded="true" aria-controls="dez">
+                           <b>UBS Colina Azul </b>
+                        </button>
+                     </h2>
+                     <div id="dez" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Avenida das Gaivotas, S/N, Área Pública, Setor Colina Azul <br>
+                              Telefone: (62) 3283-8973 / 9353 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#onze" aria-expanded="true" aria-controls="onze">
+                           <b>UBS Cruzeiro do Sul </b>
+                        </button>
+                     </h2>
+                     <div id="onze" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua do Canavial, Qd. 03, APM 06, Conjunto Cruzeiro do Sul <br>
+                              Telefone: (62) 3277-8616 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#doze" aria-expanded="true" aria-controls="doze">
+                           <b>UBS Jardim Bela Vista </b>
+                        </button>
+                     </h2>
+                     <div id="doze" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua das Paineiras, Qd. 15, Lt. 11,
+                              Jardim Bela Vista <br>
+                              Telefone: (62) 3545-4704</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#treze" aria-expanded="true" aria-controls="treze">
+                           <b>UBS Jardim dos Buritis </b>
+                        </button>
+                     </h2>
+                     <div id="treze" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua das Paineiras, Qd. 15, Lt. 11,
+                              Jardim Bela Vista <br>
+                              Telefone: (62) 3545-4704</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#quatorze" aria-expanded="true" aria-controls="quatorze">
+                           <b>UBS Jardim Paraíso </b>
+                        </button>
+                     </h2>
+                     <div id="quatorze" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua Paraíso, Qd. 07,
+                              Lt. 01 a 08 e 23 a 26, Jardim Paraíso <br>
+                              Telefone: (62) 3545-5200 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#quinze" aria-expanded="true" aria-controls="quinze">
+                           <b>UBS Madre Germana </b>
+                        </button>
+                     </h2>
+                     <div id="quinze" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua MG 17, Área Verde,
+                              Madre Germana I <br>
+                              Telefone: (62) 3258-9961
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#dezeseis" aria-expanded="true" aria-controls="dezeseis">
+                           <b>UBS Mansões Paraíso </b>
+                        </button>
+                     </h2>
+                     <div id="dezeseis" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua J-50 e Avenida W-1, Qd. 65,
+                              Lt. 19/20, Mansões Paraíso <br>
+                              Telefone: (62) 3545-9440 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#dezesete" aria-expanded="true" aria-controls="dezesete">
+                           <b>UBS Nova Olinda </b>
+                        </button>
+                     </h2>
+                     <div id="dezesete" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Avenida Independência, Qd. 14,
+                              Lt. 03, Jardim Nova Olinda <br>
+                              Telefone: (62) 3545-6029 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#dezoito" aria-expanded="true" aria-controls="dezoito">
+                           <b>UBS Papillon Park </b>
+                        </button>
+                     </h2>
+                     <div id="dezoito" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Praça São João 23, S/N,
+                              Setor Papillon Park <br>
+                              Telefone: (62) 3545-4830 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#dezenove" aria-expanded="true" aria-controls="dezenove">
+                           <b>UBS Parque Trindade </b>
+                        </button>
+                     </h2>
+                     <div id="dezenove" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Alameda Wilton Pinheiro,
+                              Qd. 25, APM-05, Parque Trindade <br>
+                              Telefone: (62) 3273-4608 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte" aria-expanded="true" aria-controls="vinte">
+                           <b>UBS Pontal Sul II </b>
+                        </button>
+                     </h2>
+                     <div id="vinte" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua do Rodeio, Qd. 49,
+                              Lt. 01, 02 e 03, Pontal Sul <br>
+                              Telefone: (62) 3545-4837 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_um" aria-expanded="true" aria-controls="vinte_um">
+                           <b>UBS Residencial Garavelo Park </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_um" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua 36-E, Qd. 106, APM-1C,
+                              Residencial Garavelo Park <br>
+                              Telefone: (62) 3578-3861
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_dois" aria-expanded="true" aria-controls="vinte_dois">
+                           <b>UBS Retiro do Bosque </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_dois" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua das Paineiras com
+                              Rua Jacarandás APM-4, Retiro do Bosque <br>
+                              Telefone: (62) 3280-9162 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_tres" aria-expanded="true" aria-controls="vinte_tres">
+                           <b>UBS Riviera </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_tres" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua Alberto Pasqualini com
+                              a Rua Dr. Pedro Ludovico Teixeira, APM-7,
+                              Qd. 31, Lt. 19, St. Jardim Riviera <br>
+                              Telefone: (62) 3280-3529 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_quatro" aria-expanded="true" aria-controls="vinte_quatro">
+                           <b>UBS Rosa dos Ventos </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_quatro" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua Dimitry Novgorodcev,
+                              APM-05, St. Rosa dos Ventos <br>
+                              Telefone: (62) 3584-8214 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_cinco" aria-expanded="true" aria-controls="vinte_cinco">
+                           <b>UBS Santa Luzia </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_cinco" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Avenida W-5, Qd. 13,
+                              Lt. 16, Jardim Olímpico <br>
+                              Telefone: (62) 3545-4701 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_seis" aria-expanded="true" aria-controls="vinte_seis">
+                           <b>UBS Santo André </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_seis" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua 24 de outubro, APM-18,
+                              St. Santo André. <br>
+                              Telefone: (62) 3283-5286 </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#vinte_sete" aria-expanded="true" aria-controls="vinte_sete">
+                           <b>UBS Vila Delfiori </b>
+                        </button>
+                     </h2>
+                     <div id="vinte_sete" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-dark">
+                           <p>Endereço: Rua Péricles Ramos, Qd. 16,
+                              Lt. 34, Vila Delfiori <br>
+                              Telefone: (62) 3545-9455 </p>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+   </section>
+
    <section class="py-5">
       <div class="container">
          <div class="row">
-            <div class="col-sm-3">
-               <img src="img/logo-apgyn.png" alt="">
+            <div class="col-12 col-sm-6 mb-5">
+               <img src="img/logo-apgyn.png" alt="" class="mx-auto d-block">
             </div>
-            <div class="col-sm-8">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut felis placerat, fringilla nulla
-                  ut, blandit neque. Vestibulum quis ante ut odio ornare ornare non sed odio. Phasellus a nisl ultrices,
-                  luctus tortor ac, auctor lacus. Vestibulum ipsum sapien, porttitor eu dictum ac, sodales ut enim.
-                  Donec at facilisis justo, aliquam iaculis massa. Morbi turpis metus, rhoncus ac molestie finibus,
-                  molestie sed est. Donec a mauris sagittis risus accumsan cursus. Sed aliquam neque id condimentum
-                  suscipit. Morbi at condimentum mauris, non tincidunt tortor.</p>
+            <div class="col-12 col-sm-6">
+               <img src="img/100anos.png" alt="" class="mx-auto d-block">
             </div>
          </div>
       </div>

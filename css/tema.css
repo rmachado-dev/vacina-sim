@@ -55,6 +55,9 @@ a, a:hover, a:active, a:focus{
 #menu{
    font-family: apex_newbook;
 }
+#menu .py-2{
+   cursor: pointer;
+}
 
 
 /* slides -----------------*/
@@ -148,3 +151,11 @@ a, a:hover, a:active, a:focus{
       font-size: 12px !important;
    }   
 }
+
+
+/* voltar ao topo -----------*/
+#back-to-top {
+   position: fixed;
+   bottom: 30px;
+   right: 30px;
+ }
